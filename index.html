@@ -19,7 +19,10 @@
       <div class="container">
         <div class="nav-wrapper">
           <a href="#" class="bookmark-logo"
-            ><img src="/images/logo-bookmark.svg" alt="Bookmark logo"
+            ><img
+              id="siteLogo"
+              src="/images/logo-bookmark.svg"
+              alt="Bookmark logo"
           /></a>
           <button
             class="desktop-nav-button"
@@ -27,14 +30,35 @@
             aria-expanded="false"
           >
             <img
+              id="navButton"
               class="icon-hamburger"
               src="/images/icon-hamburger.svg"
               alt=""
               aria-hidden="true"
             />
+            <!-- <img
+              class="icon-close"
+              src="/images/icon-close.svg"
+              alt=""
+              aria-hidden="true"
+            /> -->
+
+            <!-- SHOW THE logo and cross on mobile menu open only -->
             <span class="visually-hidden">Menu</span>
           </button>
           <nav class="primary-navigation">
+            <a href="#" class="bookmark-logo"
+              ><img
+                id="siteLogo"
+                src="/images/logo-bookmark-mobile.svg"
+                alt="Bookmark logo"
+            /></a>
+            <img
+              class="icon-close"
+              src="/images/icon-close.svg"
+              alt=""
+              aria-hidden="true"
+            />
             <ul
               id="primary-navigation"
               aria-label="Primary"
@@ -49,7 +73,7 @@
           </nav>
         </div>
       </div>
-      <nav class="mobile-nav" hidden>
+      <!-- <nav class="mobile-nav" hidden>
         <div class="mobile-top">
           <div>
             <a href="#"
@@ -90,7 +114,7 @@
             <a href="#"><img src="/images/icon-twitter.svg" alt="" /></a>
           </div>
         </div>
-      </nav>
+      </nav> -->
     </header>
 
     <main>
@@ -267,7 +291,7 @@
 
       <section class="cta | padding-block-900 bg-primary-400">
         <div class="small-container">
-          <div>
+          <div class="cta-description">
             <strong>35,000+ already joined</strong>
 
             <h2>Stay up-to-date with what we’re doing</h2>

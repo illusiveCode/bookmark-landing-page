@@ -259,6 +259,24 @@ BUTTONS
   cursor: pointer;
 }
 
+/* CTA SECTION */
+.cta-description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+
+  strong {
+    font-size: var(--fs-body);
+    text-transform: uppercase;
+    letter-spacing: var(--size-100);
+  }
+  h2 {
+    padding-block: var(--size-300);
+    font-size: var(--fs-secondary-heading);
+  }
+}
 /* ==============
 PRIMARY NAVIGATION
 =================*/
@@ -289,11 +307,42 @@ PRIMARY NAVIGATION
 @media (max-width: 50em) {
   .primary-navigation {
     display: none;
-    /* position: absolute; */
+    background-color: hsl(229 31% 21% /75%);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    ul {
+      padding-inline: var(--size-700);
+      display: block;
+      position: relative;
+      top: 7rem;
+    }
+
+    ul li {
+      padding-block: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      border-top: 1px solid var(--clr-neutral-400);
+      text-align: center;
+      width: 100%;
+      font-size: var(--fs-600);
+      color: white;
+    }
   }
   .desktop-nav-button {
     display: block;
   }
+}
+
+.icon-close {
+  right: 3rem;
+  top: 3rem;
+  position: absolute;
+  z-index: 9999;
 }
 
 .mobile-nav {

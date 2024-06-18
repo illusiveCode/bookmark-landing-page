@@ -66,6 +66,49 @@
   border: 0;
 }
 
+.flow :not(:first-child) {
+  margin-top: var(--flow-spacer, 1em);
+}
+
+.center {
+  text-align: center;
+}
+.container {
+  --max-width: 1440px;
+  --padding: 2rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+.medium-container {
+  --max-width: 940px;
+  --padding: 2rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+.small-container {
+  --max-width: 500px;
+  --padding: 2rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+.even-columns {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 50em) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
 .text-accent-400 {
   color: var(--clr-accent-400);
 }
@@ -134,42 +177,6 @@
   padding-inline: var(--size-900);
 }
 
-.container {
-  --max-width: 1440px;
-  --padding: 2rem;
-
-  width: min(var(--max-width), 100% - (var(--padding) * 2));
-  margin-inline: auto;
-}
-
-.medium-container {
-  --max-width: 940px;
-  --padding: 2rem;
-
-  width: min(var(--max-width), 100% - (var(--padding) * 2));
-  margin-inline: auto;
-}
-
-.small-container {
-  --max-width: 640px;
-  --padding: 2rem;
-
-  width: min(var(--max-width), 100% - (var(--padding) * 2));
-  margin-inline: auto;
-}
-
-.even-columns {
-  display: grid;
-  gap: 1rem;
-}
-
-@media (min-width: 50em) {
-  .even-columns {
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
-  }
-}
-
 /* ==============
 GENERAL STYLING
 =================*/
@@ -219,10 +226,6 @@ BUTTONS
   background-color: var(--clr-accent-400);
 }
 
-h2 {
-  padding-block: var(--size-500);
-}
-
 .nav-button {
   border: 0;
   text-decoration: none;
@@ -268,6 +271,8 @@ h2 {
   cursor: pointer;
 }
 
+/* FEATURES SECTION */
+
 /* CARDS */
 
 .cards {
@@ -308,7 +313,6 @@ h2 {
 
   h3 {
     font-size: 1.2rem;
-    padding-block: var(--size-300);
     font-weight: var(--fw-semi-bold);
   }
 }
@@ -381,7 +385,6 @@ ul li:focus-visible {
 
   .card-text h3 {
     font-size: 1.2rem;
-    padding-block: var(--size-300);
     font-weight: var(--fw-semi-bold);
   }
 

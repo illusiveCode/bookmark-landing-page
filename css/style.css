@@ -177,6 +177,16 @@
   padding-inline: var(--size-900);
 }
 
+.grey-text {
+  color: var(--clr-neutral-400);
+}
+
+.links * {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  list-style: none;
+}
 /* ==============
 GENERAL STYLING
 =================*/
@@ -200,7 +210,6 @@ BUTTONS
   font-size: var(--fs-button);
   color: white;
   background-color: var(--clr-primary-400);
-  /* box-shadow: 0 1em 1em -0.5em var(--clr-primary-400); */
 }
 
 .white-button {
@@ -373,6 +382,25 @@ ul li:focus-visible {
   display: none;
 }
 
+/* FOOTER */
+
+footer {
+  background-color: var(--clr-neutral-900);
+  color: white;
+}
+
+.footer-nav,
+.left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+left .footer-socials {
+  display: flex;
+  gap: 2rem;
+}
+
 @media (max-width: 50em) {
   section {
     text-align: center;
@@ -415,7 +443,6 @@ ul li:focus-visible {
       width: 100%;
       font-size: 1.3rem;
       letter-spacing: 2px;
-
       color: white;
     }
 
@@ -447,5 +474,27 @@ ul li:focus-visible {
 
   .desktop-nav-button {
     display: block;
+  }
+
+  .footer-nav,
+  .left {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    ul li {
+      padding-block: var(--size-200);
+    }
+    a {
+      margin-block: var(--size-600);
+    }
+
+    .footer-socials {
+      padding-block: var(--size-600);
+      display: inline-block;
+      flex-direction: row;
+    }
   }
 }
